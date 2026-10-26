@@ -1,11 +1,16 @@
-import { APITester } from "./APITester";
 import "./index.css";
-
-import logo from "./logo.svg";
-import reactLogo from "./react.svg";
+import { APITester } from "./APITester";
 
 export function App() {
-  return <div className="app">{/* <APITester /> */}</div>;
+  return (
+    <div className="app">
+      <h1>Welcome to Bun!</h1>
+      <p>
+        Try editing <code>src/App.tsx</code> and save to see HMR in action.
+      </p>
+      <APITester />
+    </div>
+  );
 }
 
 export default App;
