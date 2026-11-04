@@ -178,6 +178,222 @@ code {
 .response-area::placeholder {
   color: rgba(251, 240, 223, 0.4);
 }
+.todo-list {
+  margin: 2rem auto 0;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  background: #1a1a1a;
+  border: 2px solid #fbf0df;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.todo-list h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+}
+.todo-input {
+  flex: 1;
+  background: 0;
+  border: 2px solid #fbf0df;
+  border-radius: 8px;
+  color: #fbf0df;
+  font: 1em Inter, system-ui, sans-serif;
+  padding: 0.4rem 0.6rem;
+  outline: 0;
+  box-sizing: border-box;
+}
+.todo-input:focus {
+  border-color: #f3d5a3;
+}
+.todo-input::placeholder {
+  color: rgba(251, 240, 223, 0.4);
+}
+.todo-add {
+  background: #fbf0df;
+  color: #1a1a1a;
+  border: 0;
+  padding: 0.4rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.todo-add:hover {
+  background: #f3d5a3;
+  transform: translateY(-1px);
+}
+.todo-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #242424;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+.todo label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: var(--bun-cursor);
+}
+.todo.done span {
+  text-decoration: line-through;
+  color: rgba(251, 240, 223, 0.4);
+}
+.todo-delete {
+  background: none;
+  border: 0;
+  color: rgba(251, 240, 223, 0.5);
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  transition: 0.1s;
+}
+.todo-delete:hover {
+  color: #fff;
+  background: #333;
+}.todo-toolbar {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.todo-filter {
+  background: #242424;
+  color: rgba(251, 240, 223, 0.8);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.todo-filter:hover:not(:disabled) {
+  border-color: #fbf0df;
+  color: #fbf0df;
+}
+.todo-filter.active {
+  background: #fbf0df;
+  color: #1a1a1a;
+  border-color: #fbf0df;
+}
+.todo-filter:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.todo-clear {
+  margin-left: auto;
+}
+.todo-toggle-all {
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  color: rgba(251, 240, 223, 0.6);
+  font-size: 0.85em;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+.todo-toggle-all:hover:not(:disabled) {
+  color: #fbf0df;
+}
+.todo-toggle-all:disabled {
+  cursor: default;
+}
+.todo-edit {
+  flex: 1;
+  min-width: 0;
+  background: #242424;
+  border: 1px solid #f3d5a3;
+  border-radius: 6px;
+  color: #fbf0df;
+  font: 1em Inter, system-ui, sans-serif;
+  padding: 0.15rem 0.4rem;
+  outline: 0;
+}.todo-date {
+  width: auto;
+  color: #fbf0df;
+  background: #242424;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.25rem 0.4rem;
+  font-family: inherit;
+  font-size: 0.9em;
+  outline: 0;
+  color-scheme: dark;
+}
+.todo-date:focus {
+  border-color: #f3d5a3;
+}
+.todo-form .todo-date {
+  flex-shrink: 0;
+}
+.todo-text-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+.due-badge {
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: #333;
+  color: rgba(251, 240, 223, 0.8);
+  white-space: nowrap;
+}
+.due-badge.overdue {
+  background: #5c1f1f;
+  color: #ffb3b3;
+}
+.due-badge.today {
+  background: #5c4a1f;
+  color: #ffdf9e;
+}
+.todo-edit-row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+}
+.todo-edit-row .todo-edit {
+  flex: 1;
+  min-width: 0;
+}
+.todo-empty {
+  text-align: center;
+  color: rgba(251, 240, 223, 0.6);
+  margin: 0;
+}
+.todo-count {
+  margin: 0;
+  font-size: 0.9em;
+  color: rgba(251, 240, 223, 0.6);
+}
 @media (prefers-reduced-motion) {
   *,
   ::before,
